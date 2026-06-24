@@ -1,0 +1,474 @@
+/* Premier Commercial Bank - Luxury Styling */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+    --midnight-black: #1a1a1a;
+    --rose-gold: #b76e79;
+    --rose-gold-light: #d4a5a5;
+    --marble-white: #f5f5f0;
+    --marble-dark: #e8e8e0;
+    --gold-accent: #c9a96e;
+    --error-red: #8b0000;
+    --success-green: #2d5a27;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--marble-white);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--midnight-black);
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+/* Login Page - Black Backdrop */
+body.login-page {
+    background: var(--midnight-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.login-container .bank-crest {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    color: var(--rose-gold);
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.login-container .bank-subtitle {
+    color: var(--marble-white);
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    opacity: 0.7;
+}
+
+.input-field-gold {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    background: transparent;
+    border: 1px solid var(--rose-gold);
+    color: var(--marble-white);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field-gold:focus {
+    border-color: var(--gold-accent);
+    box-shadow: 0 0 20px rgba(183, 110, 121, 0.3);
+}
+
+.input-field-gold::placeholder {
+    color: rgba(245, 245, 240, 0.5);
+    letter-spacing: 2px;
+}
+
+.btn-gold {
+    width: 100%;
+    padding: 15px;
+    background: var(--rose-gold);
+    border: none;
+    color: var(--marble-white);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-gold:hover {
+    background: var(--gold-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(183, 110, 121, 0.3);
+}
+
+/* Main Layout */
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.bank-header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--rose-gold-light);
+    margin-bottom: 40px;
+}
+
+.bank-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    color: var(--midnight-black);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.bank-header .subtitle {
+    color: var(--rose-gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Navigation */
+.nav-elegant {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--marble-dark);
+    margin-bottom: 40px;
+}
+
+.nav-elegant a {
+    color: var(--midnight-black);
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.nav-elegant a:hover,
+.nav-elegant a.active {
+    border-bottom-color: var(--rose-gold);
+    color: var(--rose-gold);
+}
+
+/* Luxury Watch Face Balance */
+.balance-display {
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+}
+
+.circular-progress {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 30px;
+}
+
+.circular-progress svg {
+    transform: rotate(-90deg);
+}
+
+.circular-progress .bg-circle {
+    fill: none;
+    stroke: var(--marble-dark);
+    stroke-width: 3;
+}
+
+.circular-progress .progress-circle {
+    fill: none;
+    stroke: var(--rose-gold);
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+    filter: drop-shadow(0 0 8px rgba(183, 110, 121, 0.5));
+}
+
+.balance-amount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    color: var(--midnight-black);
+    letter-spacing: 1px;
+}
+
+.balance-label {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.9rem;
+    color: var(--rose-gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* Action Links */
+.action-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.action-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--midnight-black);
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.action-link:hover {
+    border-color: var(--rose-gold);
+    color: var(--rose-gold);
+}
+
+.action-link .icon {
+    font-size: 1.5rem;
+}
+
+/* Transaction List - Fine Dining Menu Style */
+.transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-item {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--marble-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.transaction-item:hover {
+    padding-left: 10px;
+    background: rgba(183, 110, 121, 0.05);
+}
+
+.transaction-info h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    color: var(--midnight-black);
+    letter-spacing: 1px;
+}
+
+.transaction-info .meta {
+    font-size: 0.9rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.transaction-amount {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.transaction-amount.credit {
+    color: var(--success-green);
+}
+
+.transaction-amount.debit {
+    color: var(--error-red);
+}
+
+/* Forms */
+.form-elegant {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--midnight-black);
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--marble-dark);
+    background: white;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--rose-gold);
+    box-shadow: 0 0 20px rgba(183, 110, 121, 0.1);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--midnight-black);
+    color: var(--marble-white);
+    border: none;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--rose-gold);
+}
+
+/* Receipt Style */
+.receipt {
+    background: white;
+    padding: 60px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    position: relative;
+}
+
+.receipt::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid var(--rose-gold-light);
+    pointer-events: none;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.receipt-header .bank-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    color: var(--midnight-black);
+    letter-spacing: 3px;
+}
+
+.receipt-details {
+    margin: 30px 0;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--marble-dark);
+}
+
+/* Messages */
+.message {
+    padding: 15px 20px;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+.message.error {
+    background: rgba(139, 0, 0, 0.1);
+    border-left: 3px solid var(--error-red);
+    color: var(--error-red);
+}
+
+.message.success {
+    background: rgba(45, 90, 39, 0.1);
+    border-left: 3px solid var(--success-green);
+    color: var(--success-green);
+}
+
+/* Dashboard Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--marble-dark);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--rose-gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.stat-value {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    color: var(--rose-gold);
+    letter-spacing: 2px;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+    .nav-elegant, .btn-primary {
+        display: none;
+    }
+    .receipt {
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
